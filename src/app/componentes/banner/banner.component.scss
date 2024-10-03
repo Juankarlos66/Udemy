@@ -1,0 +1,11 @@
+.banner-container {
+  display: flex;   
+justify-content:center; /* Centra la imagen horizontalmente */
+align-items: center; /* Centra la imagen verticalmente si es necesario */
+}
+  .banner-image {
+    width: 100%;  /* Ajusta el ancho al 100% */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    object-fit: cover;  /* Asegura que la imagen se ajuste correctamente */
+  }
+  

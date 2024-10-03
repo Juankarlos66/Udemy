@@ -1,0 +1,10 @@
+ion-slides, ion-slide {
+  height: 0;  // Asegura que el carrusel ocupe todo el espacio disponible
+}
+
+ion-slide img {
+  display: 0;
+  width: auto;   // Las imágenes ocuparán el 100% del ancho disponible
+  height: auto;  // Las imágenes ocuparán el 100% de la altura disponible
+  object-fit: cover;  // Asegura que las imágenes se ajusten manteniendo su aspecto
+}

@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="course-container">
+    <h2>Una amplia selección de cursos</h2>
+    <p>Elige entre más de 250 000 cursos de video en línea con nuevo contenido cada mes</p>
+
+    <!-- Tabs de categorías -->
+    <ion-segment scrollable>
+      <ion-segment-button *ngFor="let category of categories" (click)="filterCourses(category)">
+        {{ category }}
+      </ion-segment-button>
+    </ion-segment>
+
+    <!-- Descripción del curso -->
+    <div class="highlighted-course">
+      <h3>Amplía tus oportunidades profesionales con {{ currentCategory }}</h3>
+      <p>{{ highlightedDescription }}</p>
+      <ion-button color="primary">Explorar {{ currentCategory }}</ion-button>
+    </div>
+
+    <!-- Cursos en formato horizontal -->
+    <div class="courses-grid">
+      <ion-card *ngFor="let course of filteredCourses">
+        <img [src]="course.img" alt="{{ course.title }}">
+        <ion-card-content>
+          <h3>{{ course.title }}</h3>
+          <p>{{ course.price }} MX$</p>
+          <ion-button color="secondary">Ver curso</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,55 @@
+.categories-container {
+  padding: 20px;
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Aquí se ajusta para 4 columnas fijas */
+    gap: 20px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);  /* 3 columnas para pantallas medianas */
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columnas para pantallas pequeñas */
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;  /* 1 columna para pantallas muy pequeñas */
+    }
+  }
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+
+    img {
+      width: 100px;  /* Ajusta el tamaño de las imágenes */
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    ion-card-content {
+      text-align: center;
+
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    &:hover {
+      transform: scale(1.05);  /* Efecto de zoom al pasar el cursor */
+    }
+  }
+}

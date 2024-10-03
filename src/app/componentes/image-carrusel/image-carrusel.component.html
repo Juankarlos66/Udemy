@@ -1,0 +1,7 @@
+<ion-content>
+<ion-slides #slides [options]="slideOpts">
+  <ion-slide *ngFor="let img of banners">
+    <img [src]="img" alt="Imagen de carrusel" />
+  </ion-slide>
+</ion-slides>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size-sm="12"  size-md="6" size-lg="4" size-xl="3" *ngFor = "let p of product">
+      <ion-card>
+      <img alt="Imagen Productos" src="{{p.imagenP}}" />
+      <ion-card-header>
+      <ion-card-title>{{p.idP}}</ion-card-title>
+      <ion-card-subtitle>{{p.precioP}} </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+      {{p.descripcionP}}
+      </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

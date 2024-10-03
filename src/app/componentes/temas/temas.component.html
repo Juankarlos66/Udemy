@@ -1,0 +1,21 @@
+<ion-content>
+  <div class="highlighted-themes-container">
+    <h2>Temas destacados por categoría</h2>
+
+    <div class="themes-grid">
+      <div *ngFor="let category of categories" class="category-column">
+        <h3>{{ category.name }}</h3>
+        <ul>
+          <li *ngFor="let topic of category.topics">
+            <a [routerLink]="['/topic', topic.name]">{{ topic.name }}</a>
+            <p>{{ topic.learners }} learners</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ion-button expand="outline" class="discover-button">
+      Descubrir más temas
+    </ion-button>
+  </div>
+</ion-content>

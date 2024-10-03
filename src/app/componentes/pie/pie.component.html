@@ -1,0 +1,17 @@
+<footer class="footer">
+  <div class="footer-links">
+    <div *ngFor="let section of footerSections" class="column">
+      <a *ngFor="let link of section.links" [routerLink]="['/pie-detail', link.name]">{{ link.name }}</a>
+    </div>
+    <div class="column">
+      <button class="btn-language">
+        <ion-icon name="globe-outline"></ion-icon> {{ language }}
+      </button>
+    </div>
+  </div>
+
+  <div class="footer-logo">
+    <img [src]="footerLogo.src" [alt]="footerLogo.alt" />
+    <p>© 2024 Udemy, Inc.</p>
+  </div>
+</footer>

@@ -1,0 +1,45 @@
+ion-toolbar {
+  --background: #fff; /* Fondo blanco */
+  --color: #000; /* Texto negro */
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+
+  ion-title {
+    display: flex;
+    justify-content: center; /* Centra el buscador */
+  }
+
+  ion-buttons {
+    display: flex;
+    align-items: center;
+  }
+  ion-searchbar {
+    width: 400px; /* Ajusta el tamaño del buscador */
+  }
+}
+  ion-button {
+    --border-radius: 4px; /* Borde redondeado */
+    --padding: 10px 20px; /* Espacio interno */
+  
+    &.login-button {
+      border: 1px solid #000; /* Borde negro */
+      background-color: transparent; /* Fondo transparente */
+      color: #000; /* Texto negro */
+    }
+  
+    &.register-button {
+      background-color: #333; /* Fondo oscuro */
+      color: #fff; /* Texto blanco */
+      border: none; /* Sin borde */
+    }
+  
+    &.language-button {
+      border: 1px solid #000; /* Borde negro */
+      background-color: transparent; /* Fondo transparente */
+      color: #000; /* Texto negro */
+    }
+  }
+  ion-icon {
+    font-size: 15px; /* Tamaño del icono */
+  }
+  

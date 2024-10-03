@@ -1,0 +1,15 @@
+<ion-content>
+  <div class="categories-container">
+    <h2>Categorías principales</h2>
+    <div class="categories-grid">
+      <ion-card *ngFor="let category of categories" class="category-card">
+        <img [src]="category.img" alt="{{ category.name }}" />
+        <ion-card-content>
+          <h3>
+            <a [routerLink]="['/categorias-detail', category.name]">{{ category.name }}</a>
+          </h3>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

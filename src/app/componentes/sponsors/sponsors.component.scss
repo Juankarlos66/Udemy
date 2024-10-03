@@ -1,0 +1,57 @@
+.sponsors-container {
+  text-align: center;
+  padding: 3rem 0; // Aseguramos suficiente espacio vertical sin agregar márgenes innecesarios
+  background-color: #f9f9f9; // Fondo similar al estilo de la página Udemy
+  
+  .sponsor-title {
+    font-size: 1.8rem; // Un tamaño lo suficientemente grande para ser legible
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2rem;
+    padding: 0 1rem; // Asegura que el texto tenga espacio lateral en pantallas pequeñas
+  }
+
+  .sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); // Distribuye las imágenes automáticamente
+    gap: 2rem; // Espacio entre los logos
+    justify-items: center; // Centra las imágenes en cada celda
+    align-items: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%); // Hace los logos en escala de grises por defecto
+    transition: filter 0.3s ease; // Animación suave en hover
+
+    &:hover {
+      filter: grayscale(0%); // Restaura los colores al pasar el cursor
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sponsor-title {
+      font-size: 1.4rem; // Reduce el tamaño del título en pantallas más pequeñas
+    }
+
+    .sponsor-logos {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); // Ajusta el tamaño de las columnas en pantallas pequeñas
+      gap: 1.5rem; // Reduce el espacio entre los logos en pantallas más pequeñas
+    }
+
+    img {
+      max-width: 80px; // Ajusta el tamaño de los logos para pantallas más pequeñas
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sponsor-title {
+      font-size: 1.2rem; // Más pequeño para móviles
+    }
+
+    img {
+      max-width: 60px; // Ajusta el tamaño de los logos aún más para pantallas muy pequeñas
+    }
+  }
+}
